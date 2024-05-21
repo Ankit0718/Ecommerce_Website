@@ -13,6 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "tiny-emitter",
+              "p-cancelable",
+              "cross-fetch",
+              "@okta/okta-signin-widget"
+              
+            ],
             "outputPath": "dist/angular-ecommerce",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -25,9 +32,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "D:/angular_ws/angular-ecommerce/node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/@okta/okta-signin-widget/dist/css/okta-sign-in.min.css"
             ],
-            "scripts": []
+            "scripts": [
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "80d2674c-eab4-4f88-90d9-dc7b0e6d0fca"
   }
 }
